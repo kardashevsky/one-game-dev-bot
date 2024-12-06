@@ -43,20 +43,6 @@ export async function setViewportForMobile() {
     timeZone,
   };
 
-  if ('geolocation' in navigator) {
-    try {
-      const position = await new Promise((resolve, reject) => {
-        navigator.geolocation.getCurrentPosition(resolve, reject);
-      });
-      const { latitude, longitude } = position.coords;
-      deviceInfo.location = { latitude, longitude };
-    } catch (error) {
-      deviceInfo.location = { error: error.message };
-    }
-  } else {
-    deviceInfo.location = { error: "Geolocation not supported" };
-  }
-
   console.log(deviceInfo);
   return deviceInfo;
 }

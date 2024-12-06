@@ -3,7 +3,11 @@ import { apiRequest } from './api.js';
 export function initializeWebApp() {
   if (window.Telegram?.WebApp) {
     const webApp = window.Telegram.WebApp;
+    window.Telegram.WebApp.isVerticalSwipesEnabled = false;
     webApp.ready();
+    webApp.disableVerticalSwipes();
+    webApp.lockOrientation();
+
     const webAppData = getWebAppData();
 
     apiRequest('/user/createorget', 'POST', webAppData)

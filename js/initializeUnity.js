@@ -1,12 +1,12 @@
 import fit from './fit.js';
 
 const buildUrl = "Build";
-const loaderUrl = buildUrl + "/Avatar_Demo_Ver_3.loader.js";
+const loaderUrl = buildUrl + "/Avatar_Demo_Ver_4.loader.js";
 
 const config = {
-  dataUrl: buildUrl + "/Avatar_Demo_Ver_3.data.unityweb",
-  frameworkUrl: buildUrl + "/Avatar_Demo_Ver_3.framework.js.unityweb",
-  codeUrl: buildUrl + "/Avatar_Demo_Ver_3.wasm.unityweb",
+  dataUrl: buildUrl + "/Avatar_Demo_Ver_4.data.unityweb",
+  frameworkUrl: buildUrl + "/Avatar_Demo_Ver_4.framework.js.unityweb",
+  codeUrl: buildUrl + "/Avatar_Demo_Ver_4.wasm.unityweb",
   streamingAssetsUrl: "StreamingAssets",
   companyName: "NeuraGames",
   productName: "Avatar",
@@ -45,9 +45,9 @@ script.onload = () => {
   }
 
   createUnityInstance(canvas, config, (progress) => {
-    progressBarFill.style.width = `${100 * progress}%`;
-    const progressPercentage = document.querySelector("#progress-percentage");
-    progressPercentage.textContent = `${Math.round(100 * progress)}%`;
+    const percentage = Math.round(100 * progress);
+    progressBarFill.style.width = `${percentage}%`;
+    progressPercentage.textContent = `${percentage}%`;
 
     if (scaleToFit == true)
       fitGameScreen();
