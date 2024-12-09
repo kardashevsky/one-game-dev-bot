@@ -1,12 +1,12 @@
 import fit from './fit.js';
 
 const buildUrl = "Build";
-const loaderUrl = buildUrl + "/Avatar_Demo_Ver_4.loader.js";
+const loaderUrl = buildUrl + "/Avatar_Demo_Ver_5.loader.js";
 
 const config = {
-  dataUrl: buildUrl + "/Avatar_Demo_Ver_4.data.unityweb",
-  frameworkUrl: buildUrl + "/Avatar_Demo_Ver_4.framework.js.unityweb",
-  codeUrl: buildUrl + "/Avatar_Demo_Ver_4.wasm.unityweb",
+  dataUrl: buildUrl + "/Avatar_Demo_Ver_5.data.unityweb",
+  frameworkUrl: buildUrl + "/Avatar_Demo_Ver_5.framework.js.unityweb",
+  codeUrl: buildUrl + "/Avatar_Demo_Ver_5.wasm.unityweb",
   streamingAssetsUrl: "StreamingAssets",
   companyName: "NeuraGames",
   productName: "Avatar",
